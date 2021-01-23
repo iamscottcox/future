@@ -4,7 +4,11 @@ import {
   getDefaultMiddleware,
 } from "@reduxjs/toolkit";
 
-const rootReducer = combineReducers({});
+import offers from "./offers";
+
+const rootReducer = combineReducers({
+  offers,
+});
 
 export type AppState = ReturnType<typeof rootReducer>;
 
