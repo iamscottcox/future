@@ -18,22 +18,22 @@ export const calculateCuboidVolume = (
 ) => calculateSquareArea(height, width) * depth;
 
 export const calculatePyramidVolume = (baseArea: number, height: number) =>
-  (baseArea / 3) * height;
+  (1 / 3) * baseArea * height;
 
-export const calculateTriangularPyramidVolume = (
-  baseHeight: number,
+export const calculateTriangleBasedPyramidVolume = (
+  baseDepth: number,
   baseWidth: number,
   height: number
 ) => {
-  const baseArea = calculateTriangleArea(baseHeight, baseWidth);
+  const baseArea = calculateTriangleArea(baseDepth, baseWidth);
   return calculatePyramidVolume(baseArea, height);
 };
 
-export const calculateQuadrilateralPyramidVolume = (
-  baseHeight: number,
+export const calculateQuadrilateralBasedPyramidVolume = (
+  baseDepth: number,
   baseWidth: number,
   height: number
 ) => {
-  const baseArea = calculateSquareArea(baseHeight, baseWidth);
+  const baseArea = calculateSquareArea(baseDepth, baseWidth);
   return calculatePyramidVolume(baseArea, height);
 };
