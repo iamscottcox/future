@@ -62,8 +62,10 @@ export const OffersPage: FC<Props> = ({ offers, fetchData }) => {
                     {currency} {price}
                   </TableCell>
                   <TableCell>
-                    <img src={merchantLogo} alt={merchantName} />
-                    <a href={merchantUrl}>{merchantName}</a>
+                    <a href={merchantUrl}>
+                      <img src={merchantLogo} alt={merchantName} />{" "}
+                      {merchantName}
+                    </a>
                   </TableCell>
                   <TableCell>
                     <img src={imgUrl} alt={name} />
