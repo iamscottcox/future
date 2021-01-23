@@ -32,8 +32,7 @@ export const OffersPage: FC<Props> = ({ offers, fetchData }) => {
   }, [fetchData]);
 
   return (
-    <Page className="offers-page">
-      <Typography variant="h4">Offers</Typography>
+    <Page className="offers-page" title="Offers">
       <TableContainer component={Paper}>
         <Table aria-label="offers table">
           <TableHead>

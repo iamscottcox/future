@@ -1,5 +1,5 @@
-import { Box, Typography, makeStyles } from "@material-ui/core";
 import React, { FC } from "react";
+import { Typography, makeStyles } from "@material-ui/core";
 
 import CuboidVolumeCalculator from "src/components/Calculators/Volumes/Cuboid";
 import CylinderVolumeCalculator from "src/components/Calculators/Volumes/Cylinder";
@@ -19,8 +19,7 @@ export const VolumesPage: FC = () => {
   const { styles } = useStyles();
 
   return (
-    <Page className={styles}>
-      <Typography variant="h4">Volumes</Typography>
+    <Page className={styles} title="Volumes">
       <CylinderVolumeCalculator />
       <CuboidVolumeCalculator />
       <QuadrilateralBasedPyramidVolumeCalculator />
