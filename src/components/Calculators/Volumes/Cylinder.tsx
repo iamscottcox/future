@@ -17,7 +17,7 @@ export const CylinderVolumeCalculator: FC = () => {
   }, [height, diameter]);
 
   return (
-    <Box>
+    <Box className="volume-calculator">
       <Typography variant="h6">Cylinder</Typography>
       <Box display="flex" alignItems="center">
         <form>

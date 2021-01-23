@@ -19,7 +19,7 @@ export const TriangleBasedPyramidVolumeCalculator: FC = () => {
   }, [baseDepth, baseWidth, height]);
 
   return (
-    <Box>
+    <Box className="volume-calculator">
       <Typography variant="h6">Triangle Based Pyramid</Typography>
       <Box display="flex" alignItems="center">
         <form>

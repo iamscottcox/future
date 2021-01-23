@@ -19,7 +19,7 @@ export const QuadrilateralBasedPyramidVolumeCalculator: FC = () => {
   }, [baseDepth, baseWidth, height]);
 
   return (
-    <Box>
+    <Box className="volume-calculator">
       <Typography variant="h6">Quadrilateral Based Pyramid</Typography>
       <Box display="flex" alignItems="center">
         <form>

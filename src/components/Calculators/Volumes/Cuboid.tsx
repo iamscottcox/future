@@ -19,7 +19,7 @@ const CuboidVolumeCalculator: FC = () => {
   }, [height, width, depth]);
 
   return (
-    <Box>
+    <Box className="volume-calculator">
       <Typography variant="h6">Cuboid</Typography>
       <Box display="flex" alignItems="center">
         <form>
