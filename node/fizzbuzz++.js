@@ -38,7 +38,9 @@ const getFizzBuzz = (input) => {
 let fizzBuzzString = "";
 
 for (let i = 1; i <= 500; i += 1) {
-  fizzBuzzString = fizzBuzzString + getFizzBuzz(i);
+  const addition = getFizzBuzz(i);
+  console.log(addition);
+  fizzBuzzString = fizzBuzzString + addition;
 }
 
 fs.appendFile("./node/fizzbug.log", fizzBuzzString, (err) => {
