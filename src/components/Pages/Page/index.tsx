@@ -33,7 +33,6 @@ interface PageProps extends PageTitleProps {
 }
 
 const PageTitle: FC<PageTitleProps> = ({ title }) => {
-  console.log("title", title);
   const { pageTitleStyles } = useStyles();
   return title ? (
     <Typography className={pageTitleStyles} variant="h4">

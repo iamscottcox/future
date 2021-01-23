@@ -1,5 +1,5 @@
+import { Box, makeStyles } from "@material-ui/core";
 import React, { FC } from "react";
-import { Typography, makeStyles } from "@material-ui/core";
 
 import CuboidVolumeCalculator from "src/components/Calculators/Volumes/Cuboid";
 import CylinderVolumeCalculator from "src/components/Calculators/Volumes/Cylinder";
@@ -8,7 +8,7 @@ import QuadrilateralBasedPyramidVolumeCalculator from "src/components/Calculator
 import TriangleBasedPyramidVolumeCalculator from "src/components/Calculators/Volumes/TriangleBasedPyramid";
 
 const useStyles = makeStyles((theme) => ({
-  styles: {
+  volumeCalculatorStyles: {
     "& .volume-calculator": {
       padding: theme.spacing(2, 0),
     },
@@ -16,14 +16,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const VolumesPage: FC = () => {
-  const { styles } = useStyles();
+  const { volumeCalculatorStyles } = useStyles();
 
   return (
-    <Page className={styles} title="Volumes">
-      <CylinderVolumeCalculator />
-      <CuboidVolumeCalculator />
-      <QuadrilateralBasedPyramidVolumeCalculator />
-      <TriangleBasedPyramidVolumeCalculator />
+    <Page title="Volumes">
+      <Box className={volumeCalculatorStyles}>
+        <CylinderVolumeCalculator />
+        <CuboidVolumeCalculator />
+        <QuadrilateralBasedPyramidVolumeCalculator />
+        <TriangleBasedPyramidVolumeCalculator />
+      </Box>
     </Page>
   );
 };
