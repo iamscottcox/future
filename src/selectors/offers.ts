@@ -6,6 +6,12 @@ export const { selectAll: getOffers } = offersAdapter.getSelectors<AppState>(
   (state) => state.offers
 );
 
+const convertUnicode = (input: string) =>
+  input.replace(/\\u(\w\w\w\w)/g, function (a, b) {
+    var charcode = parseInt(b, 16);
+    return String.fromCharCode(charcode);
+  });
+
 export const getOffersDataTableData = createSelector([getOffers], (offers) =>
   offers.map((offer) => ({
     name: offer.offer.name,

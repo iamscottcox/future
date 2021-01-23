@@ -9,9 +9,11 @@ import {
   TableContainer,
   TableHead,
   TableRow,
+  Typography,
 } from "@material-ui/core";
 import React, { FC, useEffect } from "react";
 
+import { Page } from "src/components/Page";
 import { connect } from "react-redux";
 import { fetchData } from "src/actions/data";
 import { getOffersDataTableData } from "src/selectors/offers";
@@ -32,7 +34,8 @@ const App: FC<Props> = ({ offers, fetchData }) => {
   }, [fetchData]);
 
   return (
-    <div className="App">
+    <Page className="App">
+      <Typography variant="h4">Offers</Typography>
       <TableContainer component={Paper}>
         <Table aria-label="offers table">
           <TableHead>
@@ -73,7 +76,7 @@ const App: FC<Props> = ({ offers, fetchData }) => {
           </TableBody>
         </Table>
       </TableContainer>
-    </div>
+    </Page>
   );
 };
 
